@@ -4,7 +4,7 @@ Es WaterPy de parzibyte.me con las siguientes modificaciones:
 
 - Crea también una carpeta de thumbnails de 120x120
 - Usa una marca de agua de tamaño custom según la imágen para que se vea bien con imágenes de tamaños diferentes
-- Achica las imágenes usando 1440 pixéles como tope
+- Achica las imágenes si es necesario usando 1440 pixéles como tope (podría ser parametrizable)
 - Cambian los valores por defecto de los parámetros
 
 # WaterPy
