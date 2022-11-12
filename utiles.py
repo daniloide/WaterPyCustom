@@ -27,3 +27,8 @@ def crear_directorio_de_salida(ruta):
     ruta_verdadera = os.path.join(ruta, constantes.NOMBRE_CARPETA_SALIDA)
     crear_directorio_si_no_existe(ruta_verdadera)
     return ruta_verdadera
+
+def crear_directorio_de_thumbnails(ruta):
+    ruta_thumbnails = os.path.join(ruta, constantes.NOMBRE_CARPETA_THUMBNAILS)
+    crear_directorio_si_no_existe(ruta_thumbnails)
+    return ruta_thumbnails
