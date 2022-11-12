@@ -96,12 +96,12 @@ def poner_marca_de_agua(imagenes, marca_de_agua, **opciones):
             imagen = imagen.resize(nuevo_tamanio)
 
         # redimensionar  marca de agua
-        if (altura_imagen > anchura_imagen):  # imagen vertical
+        if (altura_imagen >= anchura_imagen):  # imagen vertical o cuadrada
             anchura_marca_de_agua_custom = int(anchura_imagen/2) 
         else: # imagen horizontal o cuadrada
             if anchura_imagen/altura_imagen > 1.5: # horizontal estandar
                 anchura_marca_de_agua_custom = int(anchura_imagen/4)
-            else: # cuadrada o semi cuadrada (entre 1x1 y 1x1.5)
+            else: # semi cuadrada (hasta 1x1.5)
                 anchura_marca_de_agua_custom = int(anchura_imagen/3)
         
         altura_marca_de_agua_custom = int(anchura_marca_de_agua_custom * altura_marca_de_agua / anchura_marca_de_agua)
