@@ -86,7 +86,7 @@ def validar():
 def procesar_lista_de_imagenes(imagenes):
     raiz["imagenes"] = imagenes
 
-app = gui("WaterPy | Redimensionar y poner marca de agua con Python - Dahiana", "600x400", showIcon=False)
+app = gui("WaterPy | Redimensionar y poner marca de agua con Python", "600x400", showIcon=False)
 """
     Otra ventana para créditos
 """
