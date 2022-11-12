@@ -115,12 +115,10 @@ app.stopSubWindow()
 """
     Ahora sí la principal
 """
-app.addLabel("l1", "1 - Selecciona una imagen o carpeta", 0,0)
+app.addLabel("l1", "1 - Selecciona una carpeta", 0,0)
 app.setLabelAlign("l1", "left")
 app.addNamedButton("Carpeta", "btnCarpeta", seleccionar_carpeta, 1, 0)
 app.setButtonImage("btnCarpeta", resolver_ruta("./assets/carpeta.png"), align="right")
-app.addNamedButton("Imagen", "btnImagen", seleccionar_imagen,1,1)
-app.setButtonImage("btnImagen", resolver_ruta("./assets/imagen.png"), align="right")
 app.addMessage("msgInfoFuente", "", 2,0)
 app.setMessageFg("msgInfoFuente", "#304FFE")
 app.setMessageAlign("msgInfoFuente", "left")
