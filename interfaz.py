@@ -86,7 +86,7 @@ def validar():
 def procesar_lista_de_imagenes(imagenes):
     raiz["imagenes"] = imagenes
 
-app = gui("WaterPy | Poner marca de agua con Python", "600x400", showIcon=False)
+app = gui("WaterPy | Redimensionar y poner marca de agua con Python - Dahiana", "600x400", showIcon=False)
 """
     Otra ventana para créditos
 """
@@ -136,7 +136,7 @@ app.setMessageAlign("msgInfoMarca", "left")
 app.setMessageWidth("msgInfoMarca", 350)
 app.setMessageFg("msgInfoMarca", "#304FFE")
 app.addLabelScale("3 - Porcentaje de opacidad", 6,0)
-app.setScaleRange("3 - Porcentaje de opacidad", 0, 100, 50)
+app.setScaleRange("3 - Porcentaje de opacidad", 0, 100, 100) # opacidad por defecto 100
 app.showScaleValue("3 - Porcentaje de opacidad", True)
 app.setScaleIncrement("3 - Porcentaje de opacidad", 1)
 app.addLabel("l3", "4 - Posición de la marca de agua",7,0)
@@ -146,20 +146,22 @@ app.setLabelAlign("l4", "center")
 app.addRadioButton("separacion_horizontal", constantes.OPCION_HORIZONTAL_IZQUIERDA, 9, 0)
 app.addRadioButton("separacion_horizontal", constantes.OPCION_HORIZONTAL_DERECHA, 10, 0)
 app.addRadioButton("separacion_horizontal", constantes.OPCION_HORIZONTAL_CENTRO, 11, 0)
+app.setRadioButton("separacion_horizontal", constantes.OPCION_HORIZONTAL_DERECHA, callFunction=True) # posicion horizontal por defecto
 app.addLabel("l5", "Vertical",8,1)
 app.setLabelAlign("l5", "center")
 app.addRadioButton("separacion_vertical", constantes.OPCION_VERTICAL_ARRIBA, 9, 1)
 app.addRadioButton("separacion_vertical", constantes.OPCION_VERTICAL_CENTRO, 10, 1)
 app.addRadioButton("separacion_vertical", constantes.OPCION_VERTICAL_ABAJO, 11, 1)
+app.setRadioButton("separacion_vertical", constantes.OPCION_VERTICAL_ABAJO, callFunction=True) # posicion vertical por defecto
 app.addLabel("l6", "Separación vertical en px",12,0)
 app.setLabelAlign("l6", "left")
 app.addEntry("e1", 12, 1)
-app.setEntry("e1", "0")
+app.setEntry("e1", "100") # separacion vertical por defecto
 app.setEntryAlign("e1", "left")
 app.addLabel("l7", "Separación horizontal en px",13,0)
 app.setLabelAlign("l7", "left")
 app.addEntry("e2", 13, 1)
-app.setEntry("e2", "0")
+app.setEntry("e2", "40") # separacion horizontal por defecto
 app.addNamedButton("Comenzar", "btnComenzar", poner_marca_de_agua,14,0)
 app.setButtonImage("btnComenzar", resolver_ruta("./assets/iniciar.png"), align="right")
 app.addNamedButton("Acerca de", "btnCreditos", mostrar_creditos,14,1)
